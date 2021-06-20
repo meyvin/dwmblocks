@@ -4,6 +4,7 @@ static const Block blocks[] = {
 	{"  ", "~/.dwm/dwmblocks/scripts/pacupdate",	360,			9},
 	{"  ", "~/.dwm/dwmblocks/scripts/memory",	6,			1},
 	{"  ", "~/.dwm/dwmblocks/scripts/volume",	2,			10},
+	{"", "~/.dwm/dwmblocks/scripts/battery",	2,			11},
 	{"  ", "~/.dwm/dwmblocks/scripts/clock",	5,			0},
 };
 
