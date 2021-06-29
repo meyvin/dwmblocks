@@ -1,29 +1,37 @@
 #!/bin/bash
+bat5=
+bat15=
+bat25=
+bat50=
+bat75=
+bat90=
+batfull=
+charging=
 
 if [ -d "/sys/class/power_supply/BAT0" ]
 then
     read -r capacity </sys/class/power_supply/BAT0/capacity
     if (( $capacity < 5 ))
     then
-      echo "  ${capacity}% "
+      printf "\x1b%s \x0b%s" "$bat5" "$capacity%"
     elif (( $capacity < 15 ))
     then
-      echo "  ${capacity}% "
+      printf "\x1c%s \x0b%s" "$bat15" "$capacity%"
     elif (( $capacity < 25 ))
     then
-      echo "  ${capacity}% "
+      printf "\x1d%s \x0b%s" "$bat25" "$capacity% "
     elif (( $capacity < 50 ))
     then
-      echo "  ${capacity}% "
+      printf "\x1e%s \x0b%s" "$bat50" "$capacity% "
     elif (( $capacity < 75 ))
     then
-      echo "  ${capacity}% "
+      printf "\x1e%s \x0b%s" "$bat75" "$capacity%"
     elif (( $capacity < 90 ))
     then
-      echo "  ${capacity}% "
+      printf "\x1e%s \x0b%s" "$bat90" "$capacity%"
     else
-      echo "  ${capacity}% "
+      printf "\x1e%s \x0b%s" "$batfull" "$capacity%"
     fi
 else
-    printf "  "
+    printf "\x1f%s\x0b" "$charging%"
 fi

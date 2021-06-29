@@ -47,6 +47,7 @@ static Block blocks[] = {
         { PATH("pacupdate.sh"),       NULL,                           3600,             2},
         { PATH("memory.sh"),          NULL,                             10,             4},
         { PATH("volume.sh"),          NULL,                              0,             3},
+        { PATH("battery.sh"),          NULL,                            10,             5},
         { PATH("clock.sh"),           NULL,                             60,             1},
         { NULL } /* just to mark the end of the array */
 };

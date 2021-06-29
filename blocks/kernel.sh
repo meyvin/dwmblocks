@@ -1,4 +1,4 @@
 #! /bin/bash 
 icon=
 kern="$(uname -r)"
-printf "%s %s \\n" "$icon" "$kern"
+printf "\x1d%s %s \x0b" "$icon" "$kern"
