@@ -18,11 +18,11 @@ esac
 vol="$(pamixer --get-volume)"
 
 if [ "$vol" -gt "70" ]; then
-	icon=" "
+	icon=""
 elif [ "$vol" -lt "30" ]; then
-	icon=" "
+	icon=""
 else
-	icon="墳 "
+	icon="墳"
 fi
 
-printf "%s%s " "$icon" "$vol%"
+printf "%s %s" "$icon" "$vol%"

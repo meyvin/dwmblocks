@@ -33,5 +33,5 @@ then
       printf "\x1e%s \x0b%s" "$batfull" "$capacity%"
     fi
 else
-    printf "\x1f%s\x0b" "$charging%"
+    printf ""
 fi

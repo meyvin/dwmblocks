@@ -1,4 +1,4 @@
 #!/bin/bash
 icon=
 cupd=$(checkupdates | wc -l)
-printf "%s %s \\n" "$icon" "$cupd" 
+printf "\x1d%s \x0b%s" "$icon" "$cupd" 
