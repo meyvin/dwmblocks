@@ -13,7 +13,7 @@ then
     read -r capacity </sys/class/power_supply/BAT0/capacity
     if (( $capacity < 5 ))
     then
-      printf "\x1b%s \x0b%s" "$bat5" "$capacity%"
+      printf "\x0d%s %s\x0b" "$bat5" "$capacity%"
     elif (( $capacity < 15 ))
     then
       printf "\x1c%s \x0b%s" "$bat15" "$capacity%"
